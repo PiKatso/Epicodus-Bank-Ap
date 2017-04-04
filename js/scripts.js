@@ -8,17 +8,20 @@ function BankAccount(userName, initialDeposit, depositAmount, withdrawalAmount) 
 
 BankAccount.prototype.deposit = function () {
   var balance = this.initialDeposit += this.depositAmount;
+  return balance;
+  console.log(balance);
 }
 
 BankAccount.prototype.withdrawal = function () {
- var balance = this.withdrawalDeposit += this.withdrawalAmount;
+ var balance = this.initialDeposit -= this.withdrawalAmount;
+ return balance;
+ console.log(balance);
 }
 
 //Front-End Logic:
 $(document).ready(function() {
   $("#bank-form").submit(function(event) {
     event.preventDefault();
-    debugger;
     var inputtedName = $("#name").val();
     var inputtedInitialDeposit = parseFloat($("#initial-deposit").val());
     var inputtedDepositAmount = parseFloat($("#deposit-amount").val());
