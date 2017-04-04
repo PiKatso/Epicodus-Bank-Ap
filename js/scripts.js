@@ -6,11 +6,11 @@ function BankAccount(userName, initialDeposit, depositAmount, withdrawalAmount) 
   this.withdrawalAmount = withdrawalAmount;
 }
 
-BankAccount.prototype.deposit = function () {
-  var balance = this.initialDeposit += this.depositAmount;
-  return balance;
-  console.log(balance);
-}
+// BankAccount.prototype.deposit = function () {
+//   var balance = this.initialDeposit += this.depositAmount;
+//   return balance;
+//   console.log(balance);
+// }
 
 BankAccount.prototype.withdrawal = function () {
  var balance = this.initialDeposit -= this.withdrawalAmount;
@@ -28,8 +28,9 @@ $(document).ready(function() {
     var inputtedWithdrawalAmount = parseFloat($("#withdrawal-amount").val());
 
     var newBankAccount = new BankAccount(inputtedName, inputtedInitialDeposit, inputtedDepositAmount, inputtedWithdrawalAmount);
-
-    var output = $("#current-balance").text(newBankAccount.deposit());
+    debugger;
+    var output = $("#current-balance").text(newBankAccount.withdrawal());
+    // var output = $("#current-balance").text(newBankAccount.withdrawal());
     console.log(output);
   });
 });
