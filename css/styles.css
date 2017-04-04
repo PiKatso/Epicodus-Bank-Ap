@@ -1,3 +1,10 @@
 h1, h3 {
   text-align: center;
 }
+
+.btn {
+  display: none;
+}
+p {
+  text-align: center;
+}
