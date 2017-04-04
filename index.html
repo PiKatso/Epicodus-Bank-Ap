@@ -9,6 +9,37 @@
     <title>Bank Account</title>
   </head>
   <body>
+    <div class="container">
+      <h1>Welcome to the Epicodus Credit Union</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="well">
+            <h2>Register a new account:</h2>
+            <label for="name">Name:</label>
+            <input type="text" name="name">
+            <br>
+            <label for="initial-deposit">Initial Deposit:</label>
+            <input type="text" name="initial-deposit">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="well">
+            <h2>Deposit or withdraw funds:</h2>
+            <label for="deposit-amount">Deposit Amount:</label>
+            <input type="text" name="deposit-amount">
+            <br>
+            <label for="withdrawal-amount">Withdrawal Amount:</label>
+            <input type="text" name="withdrawal-amount">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="well">
+          <h3>Current Balance:</h3>
+          <span id="current-balance"></span>
+        </div>
+      </div>
 
+    </div>
   </body>
 </html>
